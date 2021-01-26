@@ -1,1 +1,1 @@
-# react-ssr
+# ssr
