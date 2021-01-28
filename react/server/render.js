@@ -13,6 +13,8 @@ const render = () => {
       </body>
     </html>
   `;
+
+  return html;
 };
 
 export default render;
