@@ -1,15 +1,17 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import Home from 'client/views/Home';
+import App from 'client/App';
 
 const render = () => {
-  const content = renderToString(<Home />)
+  const content = renderToString(<App />)
 
   const html = `
     <html>
       <head></head>
       <body>
         <div id="root">${content}</div>
+        <!-- 水合 -->
+        <script src="hydrate.js"></script>
       </body>
     </html>
   `;

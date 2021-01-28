@@ -7,7 +7,7 @@ const { resolve } = path;
 module.exports = {
   mode: 'production',
 
-  entry: './server/index.js',
+  entry: resolve(__dirname, './server/index.js'),
 
   resolve: {
     extensions: ['.js', '.jsx'],
