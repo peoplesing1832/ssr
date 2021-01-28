@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev:server": "nodemon --inspect build/bundle.js",
-    "build:server": "cross-env NODE_ENV=production webpack --config webpack.server.js --color --watch"
+    "build:server": "cross-env NODE_ENV=production webpack --config webpack.server.js --color --watch",
+    "start": "npm-run-all --parallel dev:server build:*"
   },
   "author": "",
   "license": "ISC",
