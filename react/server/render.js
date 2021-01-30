@@ -3,9 +3,9 @@ import { StaticRouter } from 'react-router-dom';
 import { renderToString } from 'react-dom/server';
 import App from 'client/App';
 
-const render = (req) => {
+const render = (req, context) => {
   const content = renderToString(
-    <StaticRouter location={req.path}>
+    <StaticRouter location={req.path} context={context}>
       <App />
     </StaticRouter>
   );

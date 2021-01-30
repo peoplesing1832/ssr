@@ -1,12 +1,14 @@
 import express from 'express';
-import render from './render';
+import render from 'server/render';
 
 const app = express();
 
 // 开启静态资源服务器
 app.use(express.static("public"));
+
 app.get("*", (req, res) => {
-  const content = render(req);
+  const context = {};
+  const content = render(req, context);
   res.send(content);
 });
 
