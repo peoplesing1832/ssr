@@ -12,6 +12,10 @@ app.get("*", (req, res) => {
   if (context?.action === 'REPLACE') {
     // 重定向
     res.redirect(301, context.url);
+  } else if (context.NotFound) {
+    // 404
+    res.status(404);
+    res.send(content);
   } else {
     res.send(content);
   }
