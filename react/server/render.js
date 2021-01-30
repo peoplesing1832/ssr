@@ -1,9 +1,14 @@
 import React from 'react';
+import { StaticRouter } from 'react-router-dom';
 import { renderToString } from 'react-dom/server';
 import App from 'client/App';
 
-const render = () => {
-  const content = renderToString(<App />)
+const render = (req) => {
+  const content = renderToString(
+    <StaticRouter location={req.path}>
+      <App />
+    </StaticRouter>
+  );
 
   const html = `
     <html>
