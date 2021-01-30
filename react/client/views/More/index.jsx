@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const More = () => {
   return (
-    <h1>More</h1>
+    <>
+      <Link to="/home">home</Link>
+      <h1>More</h1>
+    </>
   );
 };
 

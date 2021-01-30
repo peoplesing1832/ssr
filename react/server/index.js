@@ -9,7 +9,12 @@ app.use(express.static("public"));
 app.get("*", (req, res) => {
   const context = {};
   const content = render(req, context);
-  res.send(content);
+  if (context?.action === 'REPLACE') {
+    // 重定向
+    res.redirect(301, context.url);
+  } else {
+    res.send(content);
+  }
 });
 
 app.listen(3000, () => {
