@@ -22,11 +22,13 @@ const routerConfig = [
     path: '/home',
     exact: true,
     component: Home,
+    getInitialData: Home.getInitialData,
   },
   {
     path: '/more',
     exact: true,
     component: More,
+    getInitialData: More.getInitialData,
   },
   {
     path: '*',
