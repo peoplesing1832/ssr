@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchHome } from 'client/store/actions/more';
+import { fetchMore } from 'client/store/actions/more';
 
 const mapStateToProps = (state) => ({
   list: state.more.list
@@ -17,7 +17,7 @@ const More = () => {
 };
 
 More.getInitialData = async () => {
-  return dispatch(fetchHome());
+  return dispatch(fetchMore());
 };
 
 export default connect(mapStateToProps, null)(More);
