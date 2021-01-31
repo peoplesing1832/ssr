@@ -16,4 +16,8 @@ const More = () => {
   );
 };
 
+More.getInitialData = async () => {
+  return dispatch(fetchHome());
+};
+
 export default connect(mapStateToProps, null)(More);
