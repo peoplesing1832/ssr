@@ -1,5 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchMore } from 'client/store/actions/home';
+
+const mapStateToProps = (state) => ({
+  list: state.home.list
+});
 
 const Home = () => {
   return (
@@ -10,4 +16,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default connect(mapStateToProps, null)(Home);
