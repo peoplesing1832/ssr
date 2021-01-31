@@ -1,5 +1,6 @@
 import express from 'express';
 import render from 'server/render';
+import createStore from 'client/store';
 
 const app = express();
 
@@ -8,7 +9,8 @@ app.use(express.static("public"));
 
 app.get("*", (req, res) => {
   const context = {};
-  const content = render(req, context);
+  const store = createStore();
+  const content = render(req, context, store);
   if (context?.action === 'REPLACE') {
     // 重定向
     res.redirect(301, context.url);

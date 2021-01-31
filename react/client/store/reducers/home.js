@@ -1,4 +1,4 @@
-import * as HomeActions from 'client/store/home';
+import * as HomeActions from 'client/store/actions/home';
 
 const defaultState = {
   list: [],

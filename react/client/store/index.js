@@ -4,10 +4,12 @@ import {
   combineReducers
 } from 'redux';
 import thunk from 'redux-thunk';
-import {
+import reducers from 'client/store/reducers';
+
+const {
   homeReducer,
   moreReducer,
-} from 'client/store/reducers';
+} = reducers;
 
 const reducer = combineReducers({
   home: homeReducer,

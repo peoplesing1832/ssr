@@ -1,4 +1,4 @@
-import * as MoreActions from 'client/store/more';
+import * as MoreActions from 'client/store/actions/more';
 
 const defaultState = {
   list: [],

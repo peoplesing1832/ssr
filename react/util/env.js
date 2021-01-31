@@ -1,1 +1,1 @@
-export const isClient = !!window;
+export const isClient = () => this?.window ? true : false;
