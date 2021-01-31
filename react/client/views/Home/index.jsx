@@ -7,7 +7,7 @@ const mapStateToProps = (state) => ({
   list: state.home.list
 });
 
-const Home = () => {
+const Home = (props) => {
   return (
     <>
       <Link to="/more">more</Link>

@@ -7,7 +7,7 @@ export const createHome = () => ({
 });
 
 export const creareHomeSuccess = (payload) => ({
-  type: GET_HOME_ERROR,
+  type: GET_HOME_SUCCESS,
   payload,
 });
 
