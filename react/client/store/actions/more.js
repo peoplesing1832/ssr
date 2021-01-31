@@ -22,7 +22,8 @@ export const fetchMore = () => {
   return async (dispatch) => {
     try {
       dispatch(createMore());
-      const payload = await fetch('接口地址');
+      // const payload = await fetch('接口地址');
+      const payload = [{name: '1'}, {name: '2'}];
       dispatch(creareMoreSuccess(payload));
     } catch (error) {
       dispatch(creareMoreError(error));

@@ -20,7 +20,8 @@ export const fetchHome = () => {
   return async (dispatch) => {
     try {
       dispatch(createHome());
-      const payload = await fetch('接口地址');
+      // const payload = await fetch('接口地址');
+      const payload = [{name: '3'}, {name: '4'}];
       dispatch(creareHomeSuccess(payload));
     } catch (error) {
       dispatch(creareHomeError(error));
