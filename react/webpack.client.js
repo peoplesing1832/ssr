@@ -3,7 +3,7 @@ const path = require('path');
 const { resolve } = path;
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
 
   entry: resolve(__dirname, './client/hydrate.js'),
 
@@ -31,6 +31,37 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+          },
+        ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+          },
+          {
+            loader: 'less-loader',
+          },
+        ],
       },
     ],
   },
