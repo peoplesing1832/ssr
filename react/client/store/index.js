@@ -18,7 +18,7 @@ const reducer = combineReducers({
 });
 
 const store = () => {
-  const initState = isClient() ? JSON.parse(window.__INITIAL_STATE__) : {};
+  const initState = isClient() ? window.__INITIAL_STATE__ : {};
   return createStore(reducer, initState, applyMiddleware(thunk));
 };
 
