@@ -20,7 +20,7 @@ app.get("*", (req, res) => {
     }
   });
   Promise.all(requests).then(() => {
-    const content = render(req, context, store);
+    const content = render(req, context, store, store.getState());
     if (context?.action === 'REPLACE') {
       // 重定向
       res.redirect(301, context.url);

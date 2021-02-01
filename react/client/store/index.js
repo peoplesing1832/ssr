@@ -5,6 +5,7 @@ import {
 } from 'redux';
 import thunk from 'redux-thunk';
 import reducers from 'client/store/reducers';
+import { isClient } from '@/util/env';
 
 const {
   homeReducer,
@@ -17,7 +18,8 @@ const reducer = combineReducers({
 });
 
 const store = () => {
-  return createStore(reducer, applyMiddleware(thunk));
+  const initState = isClient() ? JSON.parse(window.__INITIAL_STATE__) : {};
+  return createStore(reducer, initState, applyMiddleware(thunk));
 };
 
 export default store;
