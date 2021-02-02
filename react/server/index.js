@@ -31,8 +31,8 @@ app.get("*", (req, res) => {
     } else {
       res.send(content);
     }
-  }).catch(() => {
-    res.send('sever error');
+  }).catch((error) => {
+    res.send(error.message);
   })
 });
 

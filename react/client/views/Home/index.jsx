@@ -1,16 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { compose } from 'redux';
 import { connect } from 'react-redux';
-import useStyles from 'isomorphic-style-loader/useStyles';
+import withStyles from 'isomorphic-style-loader/withStyles';
 import { fetchHome } from 'client/store/actions/home';
 import styles from './index.css';
 
-const mapStateToProps = (state) => ({
-  list: state.home.list
-});
-
 const Home = (props) => {
-  useStyles(styles);
   return (
     <>
       <Link to="/more">more</Link>
@@ -19,8 +15,12 @@ const Home = (props) => {
   );
 };
 
+const mapStateToProps = (state) => ({
+  list: state.home.list
+});
+
 Home.getInitialData = async (dispatch) => {
   return dispatch(fetchHome());
 };
 
-export default connect(mapStateToProps, null)(Home);
+export default compose(connect(mapStateToProps, null), withStyles(styles))(Home);

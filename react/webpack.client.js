@@ -3,7 +3,7 @@ const path = require('path');
 const { resolve } = path;
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV,
 
   entry: resolve(__dirname, './client/hydrate.js'),
 
@@ -34,9 +34,16 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['isomorphic-style-loader', {
-          loader: 'css-loader',
-        }]
+        use: [
+          'isomorphic-style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              esModule: false,
+            }
+          },
+        ]
       },
     ],
   },
