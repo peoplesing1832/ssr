@@ -33,6 +33,12 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.css$/,
+        use: ['isomorphic-style-loader', {
+          loader: 'css-loader',
+        }]
+      },
     ],
   },
 
