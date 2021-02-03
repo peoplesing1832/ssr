@@ -2,5 +2,4 @@
 
 Vue SSR and React SSR example. please use next.js or nuxt.js in production environment.
 
-- [vue ssr]()
-- [react ssr]()
+- [blog](https://github.com/peoplesing1832/blog/issues/67)
