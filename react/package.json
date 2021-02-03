@@ -4,8 +4,8 @@
   "scripts": {
     "build:dev:server": "cross-env NODE_ENV=development webpack --config webpack.server.js --color --watch",
     "build:dev:client": "cross-env NODE_ENV=development webpack --config webpack.client.js --color --watch",
-    "build:server": "cross-env NODE_ENV=production webpack --config webpack.prod.server.js --color",
-    "build:client": "cross-env NODE_ENV=production webpack --config webpack.prod.client.js --color",
+    "build:server": "cross-env NODE_ENV=production webpack --config webpack.server.js --color",
+    "build:client": "cross-env NODE_ENV=production webpack --config webpack.client.prod.js --color",
     "build": "rimraf build && rimraf public && npm run build:server && npm run build:client",
     "dev": "nodemon build/bundle.js",
     "start": "pm2 start build/bundle.js"
@@ -33,10 +33,6 @@
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
     "isomorphic-style-loader": "^5.1.0",
-    "less": "^4.1.1",
-    "less-loader": "^8.0.0",
-    "mini-css-extract-plugin": "^1.3.5",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-import": "^14.0.0",
     "postcss-loader": "^4.2.0",
     "postcss-url": "^10.1.1",
