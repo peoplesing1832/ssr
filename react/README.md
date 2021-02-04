@@ -14,7 +14,7 @@ npm run build:dev:client
 npm run dev
 ```
 
-### 生成环境
+### 生产环境
 
 ```shell
 # 打包代码
