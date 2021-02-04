@@ -1,6 +1,6 @@
 ## React SSR
 
-> React 服务端渲染的Demo
+> React服务端渲染的示例
 
 ### 开发环境
 
