@@ -18,6 +18,7 @@ const reducer = combineReducers({
 });
 
 const store = () => {
+  // 脱水和注水
   const initState = isClient() ? window.__INITIAL_STATE__ : {};
   return createStore(reducer, initState, applyMiddleware(thunk));
 };
