@@ -1,6 +1,6 @@
 ## React SSR
 
-> React 服务端渲染的Demo
+> React服务端渲染的示例
 
 ### 开发环境
 
@@ -14,7 +14,7 @@ npm run build:dev:client
 npm run dev
 ```
 
-### 生成环境
+### 生产环境
 
 ```shell
 # 打包代码
