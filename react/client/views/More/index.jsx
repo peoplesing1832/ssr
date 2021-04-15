@@ -20,7 +20,7 @@ const mapStateToProps = (state) => ({
 });
 
 
-More.getInitialData = async () => {
+More.getInitialData = async (dispatch) => {
   return dispatch(fetchMore());
 };
 
